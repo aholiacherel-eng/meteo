@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ADJI AHOLIA WILFRIED CHEREL">
+    <link rel="stylesheet" href="style.css">
+    <title>Application Météo</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="titre">Application Météo</h1>
+        
+        <!-- Barre de recherche -->
+        <form id="form-recherche">
+            <input 
+                type="text" 
+                id="input-ville" 
+                placeholder="Entrez une ville..." 
+                required
+            >
+            <button type="submit" id="btn-recherche">
+                Rechercher
+            </button>
+        </form>
+
+        <!-- Zone d'affichage météo -->
+        <div class="affichage" id="meteo-info">
+            
+            <h2 class="ville" id="ville-nom">Ville</h2>
+            
+            <img src="" alt="Icône météo" id="icone-meteo" class="icone-meteo">
+            
+            
+            <div class="temperature">
+                <h1 id="temperature">--°C</h1>
+            </div>
+            
+            
+            <p class="description" id="description">Description météo</p>
+            
+            <!-- Détails (humidité, vent) -->
+            <div class="details">
+                <div class="detail-item">
+                    <span class="label">💧 Humidité</span>
+                    <span class="valeur" id="humidite">--%</span>
+                </div>
+                <div class="detail-item">
+                    <span class="label">💨 Vent</span>
+                    <span class="valeur" id="vent">-- km/h</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Message d'erreur -->
+        <div class="erreur" id="message-erreur"></div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
